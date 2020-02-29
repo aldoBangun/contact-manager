@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    background-color: #f2f2f2;
+}
+.container{
+    height: 200vh;
+    width: 700px;
+    margin: auto;
+}
+button{
+    display: block;
+    margin: 20px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #77f;
+}
+button:hover{box-shadow: 2px 2px 5px rgba(0,0,0,.2);}
+.card{
+    width: 250px;
+    height: 70px;
+    border-radius: 70px;
+    position: relative;
+    background-color: #eaeaea;
+    float: left;
+    transition: .1s;
+    margin: 0 10px 10px;
+}
+.card:hover{box-shadow: 2px 2px 5px rgba(0,0,0,.2);}
+.photo,
+.name,
+.phone,
+.close{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    text-transform: capitalize;
+}
+.photo{
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #77f;
+    border-radius: 50%;
+    font-size: 1.7em;
+    font-weight: 500;
+    color: #fff;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+.card:nth-child(3n) .photo{background-color: #7f7;}
+.card:nth-child(4n) .photo{background-color: #ff7;}
+.name{
+    left: 80px;
+    font-weight: 500;
+    color: #77f;
+    transform: translateY(-80%);
+}
+.phone{
+    left: 80px;
+    font-size: .8em;
+    transform: translateY(0);
+}
+.close{
+    right: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #f77;
+    pointer-events: visible;
+    cursor: pointer;
+}
+.close:hover{color:#f00;}
+.close:active{cursor: default;}
