@@ -1,23 +1,21 @@
 const Cards = function(name,phone){
     this.name = name;
     this.phone = phone;
+    
     this.addElement = function(cls,value){
         const el = document.createElement('div');
         el.setAttribute('class',cls);
         el.innerHTML = value;
         return el;
     }
+    
     this.createItems = function(){
         const ico = this.name.split("");
         const photo = this.addElement('photo',ico[0]);
-
         const close = this.addElement('close','x');
         close.setAttribute('title','Delete Contact');
-
         const name = this.addElement('name',this.name);
-
         const phone = this.addElement('phone',this.phone);
-
         const card = this.addElement('card','');
         card.appendChild(photo);
         card.appendChild(close);
